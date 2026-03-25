@@ -1,4 +1,6 @@
 import express from "express";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 import fs from "fs";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import cors from "cors";

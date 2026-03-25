@@ -17,7 +17,7 @@ export default function App() {
 
     try {
       setLoading(true);
-      const res = await axios.post(`http://localhost:3000/convert/${engine}`, {
+      const res = await axios.post(`/api/convert/${engine}`, {
         text,
         language,
       });

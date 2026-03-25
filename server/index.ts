@@ -15,11 +15,6 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
 app.use(express.urlencoded({ extended: true }));
 
-// Serve HTML
-app.get("/", (req, res) => {
-  const html = fs.readFileSync("./views/index.html", "utf-8");
-  res.send(html);
-});
 
 // External AI Convert route
 app.post("/api/convert/external", async (req, res) => {

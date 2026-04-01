@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Footer from "./components/footer";
+import About from "./components/About";
 
 const LANGUAGES = ["Kannada", "Hindi", "Telugu", "Tamil", "Malayalam"];
 
@@ -12,6 +13,7 @@ export default function App() {
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [view, setView] = useState<"main" | "about">("main");
 
   const convertText = async () => {
     if (!text.trim()) return;
@@ -45,7 +47,8 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="card">
+      {view === "main" ? (
+        <div className="card">
         <div className="header">
           <h1>Chat Language Tool</h1>
           <p className="subtitle">Romanized → Native script</p>
@@ -98,8 +101,11 @@ export default function App() {
             output
           )}
         </div>
-      </div>
-      <Footer />
+        </div>
+      ) : (
+        <About onBack={() => setView("main")} />
+      )}
+      <Footer onHomeClick={() => setView("main")} onAboutClick={() => setView("about")} />
     </div>
   );
 }

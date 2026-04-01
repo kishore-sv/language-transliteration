@@ -1,8 +1,8 @@
-# Chat Language Tool 🔠
+# Chat Language Tool
 
 A premium, casual chat language transliteration engine designed for digital communication. This tool allows users to type in Romanized script (English letters) and instantly convert it into native scripts like Kannada, Hindi, Telugu, Tamil, and Malayalam.
 
-## ✨ Key Features
+## Key Features
 
 - **Context-Aware Transliteration:** Optimized for casual spoken styles and informal chat (WhatsApp-like nuances).
 - **Dual Conversion Engines:**
@@ -12,7 +12,7 @@ A premium, casual chat language transliteration engine designed for digital comm
 - **Modern UI/UX:** A sleek, minimal design with premium typography and full mobile responsiveness.
 - **Fast Interaction:** Support for `Meta + Enter` (Mac) or `Ctrl + Enter` (Win/Linux) to trigger translation.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend (`/client`)
 - **React 19**
@@ -27,7 +27,7 @@ A premium, casual chat language transliteration engine designed for digital comm
 - **Google Generative AI SDK** (for External AI engine)
 - **Cors**
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 - [Bun](https://bun.sh/) installed on your machine.
@@ -64,7 +64,7 @@ A premium, casual chat language transliteration engine designed for digital comm
 
 The application will be available at `http://localhost:5173`.
 
-## 🎨 Design System
+## Design System
 
 The application follows a minimal, "paper-like" aesthetic:
 - **Font Face:** `Instrument Serif` (Headers) and `DM Mono` (Interface).

@@ -1,0 +1,15 @@
+{
+  "name": "Kishore Language Transliteration",
+  "short_name": "Transliteration",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f2ec",
+  "theme_color": "#c17d3c",
+  "icons": [
+    {
+      "src": "/language.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

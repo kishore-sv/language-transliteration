@@ -1,13 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import Footer from "./components/footer";
 
 const LANGUAGES = ["Kannada", "Hindi", "Telugu", "Tamil", "Malayalam"];
 
 export default function App() {
   const [text, setText] = useState("");
   const [language, setLanguage] = useState("Kannada");
-  const [engine, setEngine] = useState("local");
+  const [engine, setEngine] = useState("external");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -77,13 +78,15 @@ export default function App() {
             </select>
           </label>
 
-          <button className="submit-btn" onClick={convertText} disabled={loading || !text.trim()}>
-            {loading ? "..." : "convert"}
-          </button>
+          <div className="btn-group">
+            <button className="submit-btn" onClick={convertText} disabled={loading || !text.trim()}>
+              {loading ? "..." : "convert"}
+            </button>
 
-          <button className={`copy-btn ${copied ? "copied" : ""}`} onClick={handleCopy}>
-            {copied ? "copied" : "copy"}
-          </button>
+            <button className={`copy-btn ${copied ? "copied" : ""}`} onClick={handleCopy}>
+              {copied ? "copied" : "copy"}
+            </button>
+          </div>
         </div>
 
         <div className="output-block">
@@ -96,6 +99,7 @@ export default function App() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
